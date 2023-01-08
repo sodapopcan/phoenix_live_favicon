@@ -1,7 +1,7 @@
 # Phoenix Live Favicon
 
   Phoenix Live Favicon provides commands to manipulate the favicon(s) of
-  Phoenix Live View applications while minimizing data over the wire.
+  Phoenix LiveView applications while minimizing data over the wire.
 
   The available command actions support a variety of utility operations useful for
   Favicon manipulation. Such as setting or removing tag attributes and
@@ -35,7 +35,7 @@ import "phoenix_live_head" // <-- ADD HERE.
 ```
 
 ## Usage
-Add one or multiple sizes of your favicon to your applications main template. It's
+Add one or multiple sizes of your favicon to your applications main template. Its
 attributes can be manipulated using the convenience functions from the [Phx.Live.Favicon module](https://hexdocs.pm/phoenix_live_favicon/Phx.Live.Favicon.html)
 
 
@@ -50,13 +50,13 @@ attributes can be manipulated using the convenience functions from the [Phx.Live
 In this example the page shows `images/favicon-32x32.png` by default.
 
 **When the user opens a chat, we want to show an favicon with an envelope.**  
-Action: `Favicon.set_dynamic(socket, 'href', 'no_messages_unread')`  
+Action: `Favicon.set_dynamic(socket, "href", "no_messages_unread")`  
 Result: The href will become `images/no_messages_unread/favicon-32x32.png`.  
 
 **When we send the user a message, the favicon should indicate a message is received.**
-Action: `Favicon.set_dynamic(socket, 'href', 'messages_unread')`  
+Action: `Favicon.set_dynamic(socket, "href", "messages_unread")`  
 Result: The href becomes `images/messages_unread/favicon-32x32.png`.  
 
-To return the favicon to it's default after the chat is closed simply call `Favicon.reset(socket)`.
+To return the favicon to its default after the chat is closed simply call `Favicon.reset(socket)`.
 
 For all functions have a look at the documentation at [HexDocs](https://hexdocs.pm/phoenix_live_favicon/)
